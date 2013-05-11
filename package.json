@@ -31,6 +31,10 @@
   "engines": {
     "node": ">= 0.8.0"
   },
+  "dependencies": {
+    "grunt-mocha-test": "~0.2.2",
+    "should": "~1.2.2"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-coffee": "~0.7.0",
