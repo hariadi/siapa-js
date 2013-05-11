@@ -1,4 +1,4 @@
-# Malay Name Parser
+# Malay Name Parser [![Build Status](https://travis-ci.org/hariadi/malay-name-parser.png)](https://travis-ci.org/hariadi/malay-name-parser)
 
 > A simple script for parsing complex Malay names into their individual components.
 

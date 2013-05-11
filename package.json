@@ -1,6 +1,6 @@
 {
   "name": "malay-name-parser",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple script for parsing malay names.",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-coffee": "~0.7.0"
+    "grunt-contrib-coffee": "~0.7.0",
+    "underscore": "~1.4.4"
   }
 }
