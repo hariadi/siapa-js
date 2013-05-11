@@ -50,11 +50,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-mocha-test');
 
-  grunt.registerTask('default', [
-    'coffee'
-  ]);
   // Build templates using parser and run all tests.
   grunt.registerTask('test', [
+    'mochaTest'
+  ]);
+
+  // Build templates using parser and run all tests.
+  grunt.registerTask('default', [
     'coffee',
     'mochaTest'
   ]);
