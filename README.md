@@ -11,9 +11,8 @@ Parses Malay names into 5 components:
 
 
 ## Quick start
-For linting and testing this project uses Grunt `~0.4.1`, but Grunt is **not required** to use this parser. Check out the [Getting Started](http://gruntjs.com/getting-started) guide to learn more about Grunt.
 
-`npm install malay-name-parser`
+Install: `npm install malay-name-parser`
 
 An example:
 ```js
@@ -21,6 +20,16 @@ parser = require('malay-name-parser')
 name = parser.parse_malay_name('Dato\' Ir. Dr. Hariadi Hinta')
 console.log(name.title, name.first, name.suffixes, name.middle_names, name.last_names)
 ```
+
+
+## Contributing
+For linting and testing this project uses Grunt `~0.4.1`, but Grunt is **not required** to use this parser. Check out the [Getting Started](http://gruntjs.com/getting-started) guide to learn more about Grunt.
+
+ 1. `git clone https://github.com/hariadi/malay-name-parser.git`
+ 2. `cd malay-name-parser && npm install`
+ 3. `grunt`
+
+Thank yout.
 
 
 ## Credit
