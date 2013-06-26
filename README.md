@@ -29,7 +29,7 @@ For linting and testing this project uses Grunt `~0.4.1`, but Grunt is **not req
  2. `cd malay-name-parser && npm install`
  3. `grunt`
 
-Thank yout.
+Thank you.
 
 
 ## Credit
