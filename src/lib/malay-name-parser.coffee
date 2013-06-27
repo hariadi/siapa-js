@@ -38,9 +38,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ROYAL_TITLE = ['ydpa', 'ydpb', 'ydpn', 'tuanku', 'tengku']
 
 # Federal and state title
-FEDERAL_TITLE = ['tun', 'toh puan', 'tan sri', 'puan sri', 'datuk', 'datin', 'dato\'', 'dato\'', 'dato\'']
+FEDERAL_TITLE = ['tun', 'toh', 'tan', 'sri', 'datuk', 'datin', 'dato\'', 'dato\'', 'dato\'']
 
-OTHER_TITLE = [ 'sri', 'seri', 'ir', 'dr','tuan','puan','en','cik','mr']
+OTHER_TITLE = [ 'ir', 'dr','tuan','puan','en','cik','mr']
 
 TITLES = ROYAL_TITLE.concat(FEDERAL_TITLE, OTHER_TITLE); 
 
@@ -49,7 +49,7 @@ PUNC_TITLES = ['hon.','sr.']
 
 PREFICES = ['abu','bon','ben','bin','da','dal','de','del','der','de','e','ibn','la','san','st','ste','van','vel','von','Captain','Dr','Father','Miss','Mr','Mrs','Ms','Officer','Prof','Sister','Sr']
 
-SUFFICES = ['esq','esquire','jr','sr','2','ii','iii','iv','clu','chfc','cfp','md','phd', 'anp','apn','apnp','aprn','arnp','at','atc','at-c','cht','cnm','cnp','cns','cpnp','crna','crnp','cws','dc','dds','dmd','do','dplc','dpm','dpt','dvm','edd','facp','fnp','jd','lac','lcsw','licsw','lmft','lmhc','lmp','lmsw','lmt','lpc','lpn','ma','md','md phd','mds','mdx','mft','mph','mpt','ms','msn','mspt','msw','mx','mxrt','nd','nnp','np','np-c','od','ot','otr','pa','pac','pa-c','pc','pharm d','pharmd','phd','pnp','psc','psyd','pt','pta','rd','rda','rn','rnc','rpa-c','rph','slp','vmd', '2nd','3rd','ii','iii','iv','ix','jr','sr','vi','vii','viii','x','dds','dmd','rdh','rad','ld','professor','deputy','dphil','bs','ass']
+SUFFICES = ['md','phd', 'professor','deputy','dphil','bs','ass']
 
 CAPITALIZATION_EXCEPTIONS = {
     'ii': 'II',
@@ -133,7 +133,7 @@ class HumanName
                     name = name.replace(',','').trim()
                     pieces.push(name)
 
-            #log.debug(u"pieces: " + unicode(pieces))
+            #console.log(pieces)
 
             i = 0
             while i < pieces.length
@@ -151,6 +151,7 @@ class HumanName
                 if lc(piece) in @titles
                     #console.log  lc(piece)
                     @human_title.push(piece)
+                    console.log @human_title
                     i += 1
                     continue
                 if piece.toLowerCase() in @punc_titles
@@ -197,7 +198,7 @@ class HumanName
                     name = name.replace(',','').trim()
                     pieces.push(name)
 
-                #log.debug(u"pieces: " + unicode(pieces))
+                #console.log(pieces)
 
                 @suffixes.push part for part in parts[1..parts.length]
 

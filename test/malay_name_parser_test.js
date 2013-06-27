@@ -27,11 +27,17 @@
         name = parser.parse_malay_name('En. Hariadi Hinta');
         return should_equal(name, ['En.', 'Hariadi', '', 'Hinta', '']);
       });
-      return it("should parse correctly with a title 'Dato\'", function() {
+      it("should parse correctly with a title 'Dato\'", function() {
         var name;
 
         name = parser.parse_malay_name('Dato\' Hariadi Hinta');
         return should_equal(name, ['Dato\'', 'Hariadi', '', 'Hinta', '']);
+      });
+      return it("should parse correctly with a title 'Tan Sri\'", function() {
+        var name;
+
+        name = parser.parse_malay_name('Tan Sri Hariadi Hinta');
+        return should_equal(name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']);
       });
     });
   });

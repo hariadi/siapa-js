@@ -23,6 +23,10 @@ describe "Malay Name Parser", ->
             name = parser.parse_malay_name 'Dato\' Hariadi Hinta'
             should_equal name, ['Dato\'', 'Hariadi', '', 'Hinta', '']
 
+        it "should parse correctly with a title 'Tan Sri\'", ->
+            name = parser.parse_malay_name 'Tan Sri Hariadi Hinta'
+            should_equal name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']
+
 should_equal = (parsed_name, names) ->
     assert.equal parsed_name.title(), names[0]
     assert.equal parsed_name.first, names[1]
