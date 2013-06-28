@@ -151,7 +151,7 @@ class HumanName
                 if lc(piece) in @titles
                     #console.log  lc(piece)
                     @human_title.push(piece)
-                    console.log @human_title
+                    #console.log @human_title
                     i += 1
                     continue
                 if piece.toLowerCase() in @punc_titles

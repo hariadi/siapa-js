@@ -14,30 +14,34 @@
         return should_equal(name, ['Dato\' Ir. Dr.', 'Hariadi', '', 'Hinta', '']);
       });
     });
-    return describe("given the format 'title first middle(s) last suffix'", function() {
-      it("should parse correctly with no middle names", function() {
-        var name;
-
-        name = parser.parse_malay_name('Hariadi Hinta');
-        return should_equal(name, ['', 'Hariadi', '', 'Hinta', '']);
-      });
-      it("should parse correctly with a title 'En.'", function() {
+    describe("given the format 'title first middle(s) last suffix'", function() {
+      return it("should parse correctly with a title 'En.'", function() {
         var name;
 
         name = parser.parse_malay_name('En. Hariadi Hinta');
         return should_equal(name, ['En.', 'Hariadi', '', 'Hinta', '']);
       });
-      it("should parse correctly with a title 'Dato\'", function() {
+    });
+    describe("given the format 'title first middle(s) last'", function() {
+      it("should parse correctly with a title 'Tan Sri'", function() {
+        var name;
+
+        name = parser.parse_malay_name('Tan Sri Hariadi Hinta');
+        return should_equal(name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']);
+      });
+      return it("should parse correctly with a title 'Dato\'", function() {
         var name;
 
         name = parser.parse_malay_name('Dato\' Hariadi Hinta');
         return should_equal(name, ['Dato\'', 'Hariadi', '', 'Hinta', '']);
       });
-      return it("should parse correctly with a title 'Tan Sri\'", function() {
+    });
+    return describe("given the format 'first last'", function() {
+      return it("should parse correctly with no title first last", function() {
         var name;
 
-        name = parser.parse_malay_name('Tan Sri Hariadi Hinta');
-        return should_equal(name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']);
+        name = parser.parse_malay_name('Hariadi Bin Hinta');
+        return should_equal(name, ['', 'Hariadi', '', 'Bin Hinta', '']);
       });
     });
   });

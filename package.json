@@ -1,6 +1,6 @@
 {
   "name": "malay-name-parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple script for parsing malay names.",
   "main": "index.js",
   "scripts": {
