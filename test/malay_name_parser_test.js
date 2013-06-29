@@ -36,12 +36,20 @@
         return should_equal(name, ['Dato\'', 'Hariadi', '', 'Hinta', '']);
       });
     });
-    return describe("given the format 'first last'", function() {
+    describe("given the format 'first last'", function() {
       return it("should parse correctly with no title first last", function() {
         var name;
 
         name = parser.parse_malay_name('Hariadi Bin Hinta');
         return should_equal(name, ['', 'Hariadi', '', 'Bin Hinta', '']);
+      });
+    });
+    return describe("given the format 'first'", function() {
+      return it("should parse correctly with no title first last", function() {
+        var name;
+
+        name = parser.parse_malay_name('Hariadi');
+        return should_equal(name, ['', 'Hariadi', '', '', '']);
       });
     });
   });

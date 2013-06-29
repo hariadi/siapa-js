@@ -31,6 +31,12 @@ describe "Malay Name Parser", ->
             name = parser.parse_malay_name 'Hariadi Bin Hinta'
             should_equal name, ['', 'Hariadi', '', 'Bin Hinta', '']
 
+    describe "given the format 'first'", ->
+
+        it "should parse correctly with only first name", ->
+            name = parser.parse_malay_name 'Hariadi'
+            should_equal name, ['', 'Hariadi', '', '', '']
+
 should_equal = (parsed_name, names) ->
     assert.equal parsed_name.title(), names[0]
     assert.equal parsed_name.first, names[1]
