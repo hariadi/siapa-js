@@ -41,4 +41,5 @@ Thank you.
 
 
 ## Release History
+* 2013-06-29	v0.1.1			Add test
 * 2013-05-09	v0.1.0			First commit
