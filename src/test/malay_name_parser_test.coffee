@@ -37,6 +37,20 @@ describe "Malay Name Parser", ->
             name = parser.parse_malay_name 'Hariadi'
             should_equal name, ['', 'Hariadi', '', '', '']
 
+    describe "given royal title", ->
+
+        it "should parse correctly with YDPA title", ->
+            name = parser.parse_malay_name 'YDPA Hariadi Hinta'
+            should_equal name, ['YDPA', 'Hariadi', '', 'Hinta', '']
+
+        it "should parse correctly with Tuanku title", ->
+            name = parser.parse_malay_name 'Tuanku Hariadi Hinta'
+            should_equal name, ['Tuanku', 'Hariadi', '', 'Hinta', '']
+
+        it "should parse correctly with Tengku title", ->
+            name = parser.parse_malay_name 'Tengku Hariadi Hinta'
+            should_equal name, ['Tengku', 'Hariadi', '', 'Hinta', '']
+
 should_equal = (parsed_name, names) ->
     assert.equal parsed_name.title(), names[0]
     assert.equal parsed_name.first, names[1]

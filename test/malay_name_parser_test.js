@@ -44,12 +44,32 @@
         return should_equal(name, ['', 'Hariadi', '', 'Bin Hinta', '']);
       });
     });
-    return describe("given the format 'first'", function() {
-      return it("should parse correctly with no title first last", function() {
+    describe("given the format 'first'", function() {
+      return it("should parse correctly with only first name", function() {
         var name;
 
         name = parser.parse_malay_name('Hariadi');
         return should_equal(name, ['', 'Hariadi', '', '', '']);
+      });
+    });
+    return describe("given royal title", function() {
+      it("should parse correctly with YDPA title", function() {
+        var name;
+
+        name = parser.parse_malay_name('YDPA Hariadi Hinta');
+        return should_equal(name, ['YDPA', 'Hariadi', '', 'Hinta', '']);
+      });
+      it("should parse correctly with Tuanku title", function() {
+        var name;
+
+        name = parser.parse_malay_name('Tuanku Hariadi Hinta');
+        return should_equal(name, ['Tuanku', 'Hariadi', '', 'Hinta', '']);
+      });
+      return it("should parse correctly with Tengku title", function() {
+        var name;
+
+        name = parser.parse_malay_name('Tengku Hariadi Hinta');
+        return should_equal(name, ['Tengku', 'Hariadi', '', 'Hinta', '']);
       });
     });
   });
