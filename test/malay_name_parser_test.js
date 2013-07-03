@@ -39,20 +39,38 @@
         name = parser.parse_malay_name('Toh Puan Hariadi Hinta');
         return should_equal(name, ['Toh Puan', 'Hariadi', '', 'Hinta', '']);
       });
-      return it("should parse correctly with a title 'Tan Sri'", function() {
+      it("should parse correctly with a title 'Datuk", function() {
         var name;
 
-        name = parser.parse_malay_name('Tan Sri Hariadi Hinta');
-        return should_equal(name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']);
+        name = parser.parse_malay_name('Datuk Hariadi Hinta');
+        return should_equal(name, ['Datuk', 'Hariadi', '', 'Hinta', '']);
+      });
+      return it("should parse correctly with a title 'Datin", function() {
+        var name;
+
+        name = parser.parse_malay_name('Datin Hariadi Hinta');
+        return should_equal(name, ['Datin', 'Hariadi', '', 'Hinta', '']);
       });
     });
-    describe("given the format 'title title first middle last'", function() {
+    describe("given the multiple title", function() {
       return it("should parse correctly with multiple title", function() {
         var name;
 
         name = parser.parse_malay_name('Dato\' Ir. Dr. Hariadi Hinta');
         return should_equal(name, ['Dato\' Ir. Dr.', 'Hariadi', '', 'Hinta', '']);
       });
+    });
+    it("should parse correctly with a title 'Tan Sri'", function() {
+      var name;
+
+      name = parser.parse_malay_name('Tan Sri Hariadi Hinta');
+      return should_equal(name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']);
+    });
+    it("should parse correctly with a title 'Tan Sri Dato\'", function() {
+      var name;
+
+      name = parser.parse_malay_name('Tan Sri Dato\' Hariadi Hinta');
+      return should_equal(name, ['Tan Sri Dato\'', 'Hariadi', '', 'Hinta', '']);
     });
     describe("given the format 'title first middle(s) last suffix'", function() {
       return it("should parse correctly with a title 'En.'", function() {

@@ -27,15 +27,27 @@ describe "Malay Name Parser", ->
             name = parser.parse_malay_name 'Toh Puan Hariadi Hinta'
             should_equal name, ['Toh Puan', 'Hariadi', '', 'Hinta', '']
 
-        it "should parse correctly with a title 'Tan Sri'", ->
-            name = parser.parse_malay_name 'Tan Sri Hariadi Hinta'
-            should_equal name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']
+        it "should parse correctly with a title 'Datuk", ->
+            name = parser.parse_malay_name 'Datuk Hariadi Hinta'
+            should_equal name, ['Datuk', 'Hariadi', '', 'Hinta', '']
 
-    describe "given the format 'title title first middle last'", ->
+        it "should parse correctly with a title 'Datin", ->
+            name = parser.parse_malay_name 'Datin Hariadi Hinta'
+            should_equal name, ['Datin', 'Hariadi', '', 'Hinta', '']
+
+    describe "given the multiple title", ->
 
          it "should parse correctly with multiple title", ->
             name = parser.parse_malay_name 'Dato\' Ir. Dr. Hariadi Hinta'
             should_equal name, ['Dato\' Ir. Dr.', 'Hariadi', '', 'Hinta', '']
+
+        it "should parse correctly with a title 'Tan Sri'", ->
+            name = parser.parse_malay_name 'Tan Sri Hariadi Hinta'
+            should_equal name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']
+
+        it "should parse correctly with a title 'Tan Sri Dato\'", ->
+            name = parser.parse_malay_name 'Tan Sri Dato\' Hariadi Hinta'
+            should_equal name, ['Tan Sri Dato\'', 'Hariadi', '', 'Hinta', '']
 
     describe "given the format 'title first middle(s) last suffix'", ->
 
@@ -60,7 +72,6 @@ describe "Malay Name Parser", ->
         it "should parse correctly with only first name", ->
             name = parser.parse_malay_name 'Hariadi'
             should_equal name, ['', 'Hariadi', '', '', '']
-
     
 
 should_equal = (parsed_name, names) ->
