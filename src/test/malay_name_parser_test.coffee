@@ -72,6 +72,16 @@ describe "Malay Name Parser", ->
         it "should parse correctly with only first name", ->
             name = parser.parse_malay_name 'Hariadi'
             should_equal name, ['', 'Hariadi', '', '', '']
+
+    describe "given Other Title", ->
+
+        it "should parse correctly with a title 'Abang'", ->
+            name = parser.parse_malay_name 'Abang Hariadi'
+            should_equal name, ['Abang', 'Hariadi', '', '', '']
+
+        it "should parse correctly with a title 'Dayang'", ->
+            name = parser.parse_malay_name 'Dayang Hariadi'
+            should_equal name, ['Dayang', 'Hariadi', '', '', '']
     
 
 should_equal = (parsed_name, names) ->

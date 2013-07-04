@@ -40,7 +40,7 @@ ROYAL_TITLE = ['ydpa', 'ydpb', 'ydpn', 'tuanku', 'tengku']
 # Federal and state title
 FEDERAL_TITLE = ['tun', 'toh', 'tan', 'sri', 'datuk', 'datin', 'dato\'', 'dato\'', 'dato\'']
 
-OTHER_TITLE = [ 'ir', 'dr','tuan','puan','en','cik','mr']
+OTHER_TITLE = [ 'ir', 'dr','tuan','puan','en','cik','mr','abang','dayang']
 
 TITLES = ROYAL_TITLE.concat(FEDERAL_TITLE, OTHER_TITLE); 
 

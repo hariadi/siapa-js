@@ -96,12 +96,26 @@
         return should_equal(name, ['', 'Hariadi', '', 'Bin Hinta', '']);
       });
     });
-    return describe("given the format 'first'", function() {
+    describe("given the format 'first'", function() {
       return it("should parse correctly with only first name", function() {
         var name;
 
         name = parser.parse_malay_name('Hariadi');
         return should_equal(name, ['', 'Hariadi', '', '', '']);
+      });
+    });
+    return describe("given Other Title", function() {
+      it("should parse correctly with a title 'Abang'", function() {
+        var name;
+
+        name = parser.parse_malay_name('Abang Hariadi');
+        return should_equal(name, ['Abang', 'Hariadi', '', '', '']);
+      });
+      return it("should parse correctly with a title 'Dayang'", function() {
+        var name;
+
+        name = parser.parse_malay_name('Dayang Hariadi');
+        return should_equal(name, ['Dayang', 'Hariadi', '', '', '']);
       });
     });
   });
