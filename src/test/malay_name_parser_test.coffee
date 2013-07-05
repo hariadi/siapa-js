@@ -61,11 +61,19 @@ describe "Malay Name Parser", ->
             name = parser.parse_malay_name 'Dato\' Hariadi Hinta'
             should_equal name, ['Dato\'', 'Hariadi', '', 'Hinta', '']
 
-    describe "given the format 'first last'", ->
+    describe "given the format 'first prefix last'", ->
 
         it "should parse correctly with no title first last", ->
             name = parser.parse_malay_name 'Hariadi Bin Hinta'
             should_equal name, ['', 'Hariadi', '', 'Bin Hinta', '']
+
+        it "should parse correctly with no title first last", ->
+            name = parser.parse_malay_name 'Hariadi a/l Hinta'
+            should_equal name, ['', 'Hariadi', '', 'a/l Hinta', '']
+
+        it "should parse correctly with no title first last", ->
+            name = parser.parse_malay_name 'Hariadi a/p Hinta'
+            should_equal name, ['', 'Hariadi', '', 'a/p Hinta', '']
 
     describe "given the format 'first'", ->
 

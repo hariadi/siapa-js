@@ -88,12 +88,24 @@
         return should_equal(name, ['Dato\'', 'Hariadi', '', 'Hinta', '']);
       });
     });
-    describe("given the format 'first last'", function() {
-      return it("should parse correctly with no title first last", function() {
+    describe("given the format 'first prefix last'", function() {
+      it("should parse correctly with no title first last", function() {
         var name;
 
         name = parser.parse_malay_name('Hariadi Bin Hinta');
         return should_equal(name, ['', 'Hariadi', '', 'Bin Hinta', '']);
+      });
+      it("should parse correctly with no title first last", function() {
+        var name;
+
+        name = parser.parse_malay_name('Hariadi a/l Hinta');
+        return should_equal(name, ['', 'Hariadi', '', 'a/l Hinta', '']);
+      });
+      return it("should parse correctly with no title first last", function() {
+        var name;
+
+        name = parser.parse_malay_name('Hariadi a/p Hinta');
+        return should_equal(name, ['', 'Hariadi', '', 'a/p Hinta', '']);
       });
     });
     describe("given the format 'first'", function() {
