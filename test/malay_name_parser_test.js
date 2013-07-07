@@ -116,7 +116,7 @@
         return should_equal(name, ['', 'Hariadi', '', '', '']);
       });
     });
-    return describe("given Other Title", function() {
+    describe("given Other Title", function() {
       it("should parse correctly with a title 'Abang'", function() {
         var name;
 
@@ -128,6 +128,14 @@
 
         name = parser.parse_malay_name('Dayang Hariadi');
         return should_equal(name, ['Dayang', 'Hariadi', '', '', '']);
+      });
+    });
+    return describe("given Other SUFFICES", function() {
+      return it("should parse correctly with suffix 'Professor'", function() {
+        var name;
+
+        name = parser.parse_malay_name('Professor Hariadi Bin Hinta');
+        return should_equal(name, ['', 'Professor', 'Hariadi', 'Bin Hinta', '']);
       });
     });
   });

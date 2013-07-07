@@ -90,6 +90,12 @@ describe "Malay Name Parser", ->
         it "should parse correctly with a title 'Dayang'", ->
             name = parser.parse_malay_name 'Dayang Hariadi'
             should_equal name, ['Dayang', 'Hariadi', '', '', '']
+
+    describe "given Other SUFFICES", ->
+
+        it "should parse correctly with suffix 'Professor'", ->
+            name = parser.parse_malay_name 'Professor Hariadi Bin Hinta'
+            should_equal name, ['', 'Professor', 'Hariadi', 'Bin Hinta', '']
     
 
 should_equal = (parsed_name, names) ->
@@ -98,4 +104,5 @@ should_equal = (parsed_name, names) ->
     assert.equal parsed_name.middle(), names[2]
     assert.equal parsed_name.last(), names[3]
     assert.equal parsed_name.suffix(), names[4]
+    #console.log('Title: ' + parsed_name.title(), 'First: ' + parsed_name.first, 'Middle: ' + parsed_name.middle(), 'Last: ' + parsed_name.last(), 'Suffix: ' + parsed_name.suffix());
 
