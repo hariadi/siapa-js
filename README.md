@@ -12,7 +12,7 @@ Parses Malay names into 5 components:
 
 ## Quick start
 
-Install: `npm install malay-name-parser`
+Install: `npm install https://github.com/hariadi/malay-name-parser/tarball/master`
 
 An example:
 ```js
