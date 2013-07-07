@@ -33,7 +33,8 @@
   },
   "dependencies": {
     "grunt-mocha-test": "~0.7.0",
-    "should": "~2.1.0"
+    "should": "~2.1.0",
+    "commander": "~1.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
