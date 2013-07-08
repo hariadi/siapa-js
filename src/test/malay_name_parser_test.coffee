@@ -17,6 +17,10 @@ describe "Malay Name Parser", ->
             name = parser.parse_malay_name 'Tengku Hariadi Hinta'
             should_equal name, ['Tengku', 'Hariadi', '', 'Hinta', '']
 
+        it "should parse correctly with YBhg. title", ->
+            name = parser.parse_malay_name 'YBhg. Hariadi Hinta'
+            should_equal name, ['YBhg.', 'Hariadi', '', 'Hinta', '']
+
     describe "given Federal Title", ->
 
         it "should parse correctly with Tun title", ->

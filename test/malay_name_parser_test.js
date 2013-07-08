@@ -19,11 +19,17 @@
         name = parser.parse_malay_name('Tuanku Hariadi Hinta');
         return should_equal(name, ['Tuanku', 'Hariadi', '', 'Hinta', '']);
       });
-      return it("should parse correctly with Tengku title", function() {
+      it("should parse correctly with Tengku title", function() {
         var name;
 
         name = parser.parse_malay_name('Tengku Hariadi Hinta');
         return should_equal(name, ['Tengku', 'Hariadi', '', 'Hinta', '']);
+      });
+      return it("should parse correctly with YBhg. title", function() {
+        var name;
+
+        name = parser.parse_malay_name('YBhg. Hariadi Hinta');
+        return should_equal(name, ['YBhg.', 'Hariadi', '', 'Hinta', '']);
       });
     });
     describe("given Federal Title", function() {
