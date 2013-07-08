@@ -47,9 +47,9 @@ TITLES = ROYAL_TITLE.concat(FEDERAL_TITLE, OTHER_TITLE);
 # These could be names too, but if they have period at the end they're a title
 PUNC_TITLES = ['hon.','sr.']
 
-PREFICES = ['abu','bon','ben','bin','da','dal','de','del','der','de','e','ibn','la','san','st','ste','van','vel','von','Captain','Dr','Father','Miss','Mr','Mrs','Ms','Officer','Prof','Sister','Sr','a/l','a/p']
+PREFICES = ['abu','bon','ben','bin','ibn','Dr','Father','Miss','Mr','Mrs','Ms','Officer','Prof','Sister','Sr','a/l','a/p']
 
-SUFFICES = ['md','phd', 'professor','deputy','dphil','bs','ass']
+SUFFICES = ['md','phd', 'professor','deputy']
 
 CAPITALIZATION_EXCEPTIONS = {
     'ii': 'II',
