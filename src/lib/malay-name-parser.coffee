@@ -38,7 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ROYAL_TITLE = ['ydpa', 'ydpb', 'ydpn', 'tuanku', 'tengku','ybhg']
 
 # Federal and state title
-FEDERAL_TITLE = ['tun', 'toh', 'tan', 'sri', 'datuk', 'datin', 'dato\'', 'dato\'', 'dato\'']
+FEDERAL_TITLE = ['tun', 'toh', 'tan', 'sri', 'datuk', 'datin', 'dato\'']
 
 OTHER_TITLE = [ 'ir', 'dr','tuan','puan','en','cik','mr','abang','dayang']
 
