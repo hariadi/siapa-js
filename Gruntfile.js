@@ -36,11 +36,11 @@ module.exports = function(grunt) {
 
     // Run mocha tests.
     mochaTest: {
-      files: ['test/*_test.js']
-    },
-    mochaTestConfig: {
-      options: {
-        reporter: 'spec'
+      test: {
+        options: {
+          reporter: 'spec'
+        },
+        src: ['test/*_test.js']
       }
     }
 
