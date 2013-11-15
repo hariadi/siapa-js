@@ -284,7 +284,6 @@ class HumanName
             @unparsable = true
             #log.error(u"Unparsable full_name: " + this.full_name)
 
-parse_malay_name = (name) ->
+exports.parse = (name) ->
     new HumanName name
-
-exports.parse_malay_name = parse_malay_name
+    
