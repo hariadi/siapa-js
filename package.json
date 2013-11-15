@@ -1,5 +1,5 @@
 {
-  "name": "malay-name-parser",
+  "name": "siapa",
   "version": "0.1.1",
   "description": "A simple script for parsing malay names.",
   "main": "index.js",
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hariadi/malay-name-parser.git"
+    "url": "https://github.com/hariadi/siapa.git"
   },
   "bugs": {
-    "url": "git://github.com/hariadi/malay-name-parser/isues"
+    "url": "git://github.com/hariadi/siapa/issues"
   },
   "keywords": [
     "malay",
@@ -25,7 +25,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/hariadi/malay-name-parser/blob/master/LICENSE-MIT"
+      "url": "https://github.com/hariadi/siapa/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {

@@ -1,1 +1,1 @@
-module.exports = require('./lib/malay-name-parser');
+module.exports = require('./lib');
