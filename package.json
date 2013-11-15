@@ -2,9 +2,9 @@
   "name": "malay-name-parser",
   "version": "0.1.1",
   "description": "A simple script for parsing malay names.",
-  "main": "index.js",
-  "scripts": {
-    "test": "grunt test"
+  "author": {
+    "name": "Hariadi Hinta",
+    "url": "https://github.com/hariadi"
   },
   "repository": {
     "type": "git",
@@ -12,15 +12,6 @@
   },
   "bugs": {
     "url": "git://github.com/hariadi/malay-name-parser/isues"
-  },
-  "keywords": [
-    "malay",
-    "name",
-    "parser"
-  ],
-  "author": {
-    "name": "Hariadi Hinta",
-    "url": "https://github.com/hariadi"
   },
   "licenses": [
     {
@@ -31,12 +22,15 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "dependencies": {
-    "grunt-mocha-test": "~0.7.0",
-    "should": "~2.1.0"
-  },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-coffee": "~0.7.0"
-  }
+      "mocha": "*"
+  },
+  "scripts": {
+      "test": "mocha --reporter spec"
+  },
+  "keywords": [
+    "malay",
+    "name",
+    "parser"
+  ]
 }

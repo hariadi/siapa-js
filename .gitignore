@@ -1,7 +1,16 @@
-.npmignore
-/node_modules/
-*.tmp
-*.sublime-project
-*.sublime-workspace
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
 
-src/docs
+pids
+logs
+results
+
+npm-debug.log
+.DS_Store
+node_modules

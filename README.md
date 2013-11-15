@@ -3,35 +3,41 @@
 > A simple script for parsing complex Malay names into their individual components.
 
 Parses Malay names into 5 components:
-- Title
+- Salutation
 - First name
 - Middle names
 - Last names
 - Suffixes
 
-
 ## Quick start
 
-Install: `npm install https://github.com/hariadi/malay-name-parser/tarball/master`
+Install: `npm install siapa`
 
-An example:
 ```js
-parser = require('malay-name-parser')
-name = parser.parse_malay_name('Dato\' Ir. Dr. Hariadi Hinta')
-console.log(name.title, name.first, name.suffixes, name.middle_names, name.last_names)
+var siapa = require('siapa');
+
+var nama = siapa.parse('En. Hariadi Bin Hinta');
+
+console.log(nama.salutation); // En.
+console.log(nama.first); // Hariadi
+console.log(nama.middle); // Bin
+console.log(nama.last); // Hinta
 ```
 
+## Support for all kinds of names
 
-## Contributing
-For linting and testing this project uses Grunt `~0.4.1`, but Grunt is **not required** to use this parser. Check out the [Getting Started](http://gruntjs.com/getting-started) guide to learn more about Grunt.
+```js
+var name = siapa.parse('Hariadi Hinta');
+console.log(name.first); // Hariadi
+console.log(name.last); // Hinta
 
- 1. `git clone https://github.com/hariadi/malay-name-parser.git`
- 2. `cd malay-name-parser && npm install`
- 3. `grunt`
+name = siapa.parse('Dr. Hariadi');
+console.log(name.salutation); // Dr.
+console.log(name.last); // Hariadi
 
-Thank you.
-
-
+name = siapa.parse('Hariadi');
+console.log(name.first); // Hariadi
+```
 ## Credit
 > Many of these name parser logic come from the following repos:
 
