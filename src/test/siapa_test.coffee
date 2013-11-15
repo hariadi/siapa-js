@@ -1,4 +1,4 @@
-parser = require '../lib/malay-name-parser'
+parser = require '../lib/siapa'
 assert = require 'should'
 
 describe "Malay Name Parser", ->

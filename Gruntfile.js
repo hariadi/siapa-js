@@ -1,6 +1,6 @@
 /*
- * malay-name-parser
- * http://github.com/hariadi/malay-name-parser
+ * siapa
+ * http://github.com/hariadi/siapa
  *
  * Copyright (c) 2013 Hariadi Hinta
  * MIT License

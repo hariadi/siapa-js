@@ -1,4 +1,4 @@
-# Malay Name Parser [![Build Status](https://travis-ci.org/hariadi/malay-name-parser.png)](https://travis-ci.org/hariadi/malay-name-parser)
+# Malay Name Parser [![Build Status](https://travis-ci.org/hariadi/siapa.png)](https://travis-ci.org/hariadi/siapa)
 
 > A simple script for parsing complex Malay names into their individual components.
 
@@ -12,11 +12,11 @@ Parses Malay names into 5 components:
 
 ## Quick start
 
-Install: `npm install https://github.com/hariadi/malay-name-parser/tarball/master`
+Install: `npm install https://github.com/hariadi/siapa/tarball/master`
 
 An example:
 ```js
-parser = require('malay-name-parser')
+parser = require('siapa')
 name = parser.parse_malay_name('Dato\' Ir. Dr. Hariadi Hinta')
 console.log(name.title, name.first, name.suffixes, name.middle_names, name.last_names)
 ```
@@ -25,8 +25,8 @@ console.log(name.title, name.first, name.suffixes, name.middle_names, name.last_
 ## Contributing
 For linting and testing this project uses Grunt `~0.4.1`, but Grunt is **not required** to use this parser. Check out the [Getting Started](http://gruntjs.com/getting-started) guide to learn more about Grunt.
 
- 1. `git clone https://github.com/hariadi/malay-name-parser.git`
- 2. `cd malay-name-parser && npm install`
+ 1. `git clone https://github.com/hariadi/siapa.git`
+ 2. `cd siapa && npm install`
  3. `grunt`
 
 Thank you.
