@@ -1,6 +1,6 @@
-# Malay Name Parser [![Build Status](https://travis-ci.org/hariadi/siapa.png)](https://travis-ci.org/hariadi/siapa)
+# siapa [![Build Status](https://travis-ci.org/hariadi/siapa.png)](https://travis-ci.org/hariadi/siapa)
 
-> A simple script for parsing complex Malay names into their individual components.
+> Malay Name Parser: A simple script for parsing complex Malay names into their individual components.
 
 Parses Malay names into 5 components:
 - Title
@@ -16,8 +16,8 @@ Install: `npm install https://github.com/hariadi/siapa/tarball/master`
 
 An example:
 ```js
-parser = require('siapa')
-name = parser.parse_malay_name('Dato\' Ir. Dr. Hariadi Hinta')
+var siapa = require('siapa');
+var name = siapa.parse('Dato\' Ir. Dr. Hariadi Hinta')
 console.log(name.title, name.first, name.suffixes, name.middle_names, name.last_names)
 ```
 
@@ -41,5 +41,6 @@ Thank you.
 
 
 ## Release History
+* 2013-06-29	v0.1.1			Add test
 * 2013-06-29	v0.1.1			Add test
 * 2013-05-09	v0.1.0			First commit
