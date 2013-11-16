@@ -57,6 +57,10 @@ describe "Malay Name Parser", ->
       name = siapa.parse 'Tan Sri Dato\' Hariadi Hinta'
       should_equal name, ['Tan Sri Dato\'', 'Hariadi', '', 'Hinta', '']
 
+    it "should parse correctly with a title 'Dato\' Seri", ->
+      name = siapa.parse 'Dato\' Seri Hariadi Hinta'
+      should_equal name, ['Dato\' Seri', 'Hariadi', '', 'Hinta', '']
+
   describe "given the format 'title first middle(s) last suffix'", ->
 
     it "should parse correctly with a title 'En.'", ->

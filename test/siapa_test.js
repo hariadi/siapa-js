@@ -66,10 +66,15 @@
         name = siapa.parse('Tan Sri Hariadi Hinta');
         return should_equal(name, ['Tan Sri', 'Hariadi', '', 'Hinta', '']);
       });
-      return it("should parse correctly with a title 'Tan Sri Dato\'", function() {
+      it("should parse correctly with a title 'Tan Sri Dato\'", function() {
         var name;
         name = siapa.parse('Tan Sri Dato\' Hariadi Hinta');
         return should_equal(name, ['Tan Sri Dato\'', 'Hariadi', '', 'Hinta', '']);
+      });
+      return it("should parse correctly with a title 'Dato\' Seri", function() {
+        var name;
+        name = siapa.parse('Dato\' Seri Hariadi Hinta');
+        return should_equal(name, ['Dato\' Seri', 'Hariadi', '', 'Hinta', '']);
       });
     });
     describe("given the format 'title first middle(s) last suffix'", function() {
