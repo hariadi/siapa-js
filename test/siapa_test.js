@@ -116,6 +116,16 @@
       });
     });
     describe("given Other Title", function() {
+      it("should parse correctly with a title 'Encik First'", function() {
+        var name;
+        name = siapa.parse('Encik Hariadi');
+        return should_equal(name, ['Encik', 'Hariadi', '', '', '']);
+      });
+      it("should parse correctly with a title 'Encik First Last'", function() {
+        var name;
+        name = siapa.parse('Encik Hariadi Hinta');
+        return should_equal(name, ['Encik', 'Hariadi', '', 'Hinta', '']);
+      });
       it("should parse correctly with a title 'Abang'", function() {
         var name;
         name = siapa.parse('Abang Hariadi');

@@ -95,6 +95,14 @@ describe "Malay Name Parser", ->
 
   describe "given Other Title", ->
 
+    it "should parse correctly with a title 'Encik First'", ->
+      name = siapa.parse 'Encik Hariadi'
+      should_equal name, ['Encik', 'Hariadi', '', '', '']
+
+    it "should parse correctly with a title 'Encik First Last'", ->
+      name = siapa.parse 'Encik Hariadi Hinta'
+      should_equal name, ['Encik', 'Hariadi', '', 'Hinta', '']
+
     it "should parse correctly with a title 'Abang'", ->
       name = siapa.parse 'Abang Hariadi'
       should_equal name, ['Abang', 'Hariadi', '', '', '']
