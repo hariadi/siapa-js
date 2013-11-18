@@ -12,7 +12,7 @@ Parses Malay names into 5 components:
 
 ## Quick start
 
-Install: `npm install https://github.com/hariadi/siapa/tarball/master`
+Install: `npm install siapa`
 
 An example:
 ```js
@@ -41,6 +41,6 @@ Thank you.
 
 
 ## Release History
-* 2013-06-29	v0.1.1			Add test
+* 2013-11-16	v0.1.2			Add more salutations test
 * 2013-06-29	v0.1.1			Add test
 * 2013-05-09	v0.1.0			First commit
