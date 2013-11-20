@@ -32,6 +32,11 @@
         name = siapa.parse('Tunku Hariadi Hinta');
         return should_equal(name, ['Tunku', 'Hariadi', '', 'Hinta', '']);
       });
+      it("should parse correctly with Raja title", function() {
+        var name;
+        name = siapa.parse('Raja Hariadi Hinta');
+        return should_equal(name, ['Raja', 'Hariadi', '', 'Hinta', '']);
+      });
       return it("should parse correctly with title and royal title", function() {
         var name;
         name = siapa.parse('YBhg. Tengku Hariadi Hinta');

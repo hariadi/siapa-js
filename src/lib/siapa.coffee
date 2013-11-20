@@ -35,21 +35,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###
 
 # Malay royalty
-ROYAL_TITLE = ['ydpa', 'ydpb', 'ydpn', 'tuanku', 'tengku','ybhg', 'tunku']
+ROYAL_TITLE = ['ydpa', 'ydpb', 'ydpn', 'tuanku', 'tengku', 'ybhg', 'tunku', 'raja']
 
 # Federal and state title
 FEDERAL_TITLE = ['tun', 'toh', 'tan', 'sri', 'datuk', 'datin', 'dato\'', 'seri']
 
-OTHER_TITLE = [ 'ir', 'dr','tuan','puan','en','encik','cik','mr','abang','dayang']
+OTHER_TITLE = ['ir', 'dr', 'tuan', 'puan', 'en', 'encik', 'cik', 'mr', 'abang', 'dayang']
 
-TITLES = ROYAL_TITLE.concat(FEDERAL_TITLE, OTHER_TITLE); 
+TITLES = ROYAL_TITLE.concat(FEDERAL_TITLE,OTHER_TITLE); 
 
 # These could be names too, but if they have period at the end they're a title
-PUNC_TITLES = ['hon.','sr.']
+PUNC_TITLES = ['hon.', 'sr.']
 
-PREFICES = ['abu','bon','ben','bin','ibn','Dr','Father','Miss','Mr','Mrs','Ms','Officer','Prof','Sister','Sr','a/l','a/p']
+PREFICES = ['abu', 'bon', 'ben', 'bin', 'ibn', 'Dr', 'Father', 'Miss', 'Mr', 'Mrs', 'Ms', 'Officer', 'Prof', 'Sister', 'Sr', 'a/l', 'a/p']
 
-SUFFICES = ['md','phd', 'professor','deputy']
+SUFFICES = ['md', 'phd', 'professor', 'deputy']
 
 CAPITALIZATION_EXCEPTIONS = {
     'ii': 'II',
@@ -68,7 +68,7 @@ re_initial = /^(\w\.|[A_Z])?$/
 
 lc = (value) ->
     return "" if not value
-    return value.toLowerCase().replace('.','')
+    return value.toLowerCase().replace('.','' )
 
 is_not_initial = (value) ->
     return not value.match(re_initial)
@@ -82,7 +82,7 @@ class HumanName
         @last_names = []
         @unparsable = false
         @count = 0
-        @members = ['title','first','middle','last','suffix']
+        @members = ['title', 'first', 'middle', 'last', 'suffix']
         if @full_name
             @parse_full_name()
 
