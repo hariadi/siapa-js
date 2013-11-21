@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###
 
 # Malay royalty
-ROYAL_TITLE = ['ydpa', 'ydpb', 'ydpn', 'tuanku', 'tengku', 'ybhg', 'tunku', 'raja']
+ROYAL_TITLE = ['ydpa', 'ydpb', 'ydpn', 'tuanku', 'tengku', 'ybhg', 'tunku', 'raja','daeng']
 
 # Federal and state title
 FEDERAL_TITLE = ['tun', 'toh', 'tan', 'sri', 'datuk', 'datin', 'dato\'', 'seri']
