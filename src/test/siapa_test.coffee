@@ -29,6 +29,10 @@ describe "Malay Name Parser", ->
       name = siapa.parse 'Raja Hariadi Hinta'
       should_equal name, ['Raja', 'Hariadi', '', 'Hinta', '']
 
+    it "should parse correctly with Daeng title", ->
+      name = siapa.parse 'Daeng Hariadi Hinta'
+      should_equal name, ['Daeng', 'Hariadi', '', 'Hinta', '']
+
     it "should parse correctly with title and royal title", ->
       name = siapa.parse 'YBhg. Tengku Hariadi Hinta'
       should_equal name, ['YBhg. Tengku', 'Hariadi', '', 'Hinta', '']
