@@ -123,6 +123,10 @@ describe "Malay Name Parser", ->
       name = siapa.parse 'Abang Hariadi'
       should_equal name, ['Abang', 'Hariadi', '', '', '']
 
+    it "should parse correctly with a title 'Haji'", ->
+      name = siapa.parse 'Haji Hariadi'
+      should_equal name, ['Haji', 'Hariadi', '', '', '']
+
     it "should parse correctly with a title 'Dayang'", ->
       name = siapa.parse 'Dayang Hariadi'
       should_equal name, ['Dayang', 'Hariadi', '', '', '']

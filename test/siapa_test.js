@@ -151,6 +151,11 @@
         name = siapa.parse('Abang Hariadi');
         return should_equal(name, ['Abang', 'Hariadi', '', '', '']);
       });
+      it("should parse correctly with a title 'Haji'", function() {
+        var name;
+        name = siapa.parse('Haji Hariadi');
+        return should_equal(name, ['Haji', 'Hariadi', '', '', '']);
+      });
       return it("should parse correctly with a title 'Dayang'", function() {
         var name;
         name = siapa.parse('Dayang Hariadi');
