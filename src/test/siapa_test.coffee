@@ -131,6 +131,10 @@ describe "Malay Name Parser", ->
       name = siapa.parse 'Dayang Hariadi'
       should_equal name, ['Dayang', 'Hariadi', '', '', '']
 
+    it "should parse correctly with a title 'Pehin'", ->
+      name = siapa.parse 'Pehin Hariadi'
+      should_equal name, ['Pehin', 'Hariadi', '', '', '']
+
   describe "given Other SUFFICES", ->
 
     it "should parse correctly with suffix 'Professor'", ->
