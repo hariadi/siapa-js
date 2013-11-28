@@ -156,10 +156,15 @@
         name = siapa.parse('Haji Hariadi');
         return should_equal(name, ['Haji', 'Hariadi', '', '', '']);
       });
-      return it("should parse correctly with a title 'Dayang'", function() {
+      it("should parse correctly with a title 'Dayang'", function() {
         var name;
         name = siapa.parse('Dayang Hariadi');
         return should_equal(name, ['Dayang', 'Hariadi', '', '', '']);
+      });
+      return it("should parse correctly with a title 'Pehin'", function() {
+        var name;
+        name = siapa.parse('Pehin Hariadi');
+        return should_equal(name, ['Pehin', 'Hariadi', '', '', '']);
       });
     });
     return describe("given Other SUFFICES", function() {
