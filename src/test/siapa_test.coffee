@@ -59,6 +59,10 @@ describe "Malay Name Parser", ->
       name = siapa.parse 'Datin Hariadi Hinta'
       should_equal name, ['Datin', 'Hariadi', '', 'Hinta', '']
 
+    it "should parse correctly with a title 'Paduka", ->
+      name = siapa.parse 'Paduka Hariadi Hinta'
+      should_equal name, ['Paduka', 'Hariadi', '', 'Hinta', '']
+
   describe "given the multiple title", ->
 
     it "should parse correctly with multiple title", ->
