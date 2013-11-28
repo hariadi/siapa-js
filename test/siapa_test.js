@@ -69,10 +69,15 @@
         name = siapa.parse('Datuk Hariadi Hinta');
         return should_equal(name, ['Datuk', 'Hariadi', '', 'Hinta', '']);
       });
-      return it("should parse correctly with a title 'Datin", function() {
+      it("should parse correctly with a title 'Datin", function() {
         var name;
         name = siapa.parse('Datin Hariadi Hinta');
         return should_equal(name, ['Datin', 'Hariadi', '', 'Hinta', '']);
+      });
+      return it("should parse correctly with a title 'Paduka", function() {
+        var name;
+        name = siapa.parse('Paduka Hariadi Hinta');
+        return should_equal(name, ['Paduka', 'Hariadi', '', 'Hinta', '']);
       });
     });
     describe("given the multiple title", function() {
