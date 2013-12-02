@@ -3,11 +3,11 @@
 > Malay Name Parser: A simple script for parsing complex Malay names into their individual components.
 
 Parses Malay names into 5 components:
-- Title
-- First name
-- Middle names
-- Last names
-- Suffixes
+* Title
+* First name
+* Middle names
+* Last names
+* Suffixes
 
 
 ## Quick start
