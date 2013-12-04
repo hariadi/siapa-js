@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/hariadi/siapa.git"
   },
+  "bin": "lib/malay",
   "bugs": {
     "url": "git://github.com/hariadi/siapa/issues"
   },
