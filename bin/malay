@@ -5,7 +5,7 @@
  */
 
 var program = require('commander');
-var parser = require('../lib/siapa');
+var siapa = require('../lib/siapa');
 
 program
   .version('0.0.1')
@@ -24,5 +24,12 @@ var query = program.args.shift()
 //if (!paths.length) paths.push(process.cwd());
 
 
-var name = parser.parse_malay_name(query);
-console.log('Title: ' + name.title(), 'First: ' + name.first, 'Middle: ' + name.middle(), 'Last: ' + name.last(), 'Suffix: ' + name.suffix());
+var name = siapa.parse(query);
+var nameObj = {
+	title: name.title(),
+	first: name.first,
+	middle: name.middle(),
+	last: name.last(),
+	suffix: name.suffix()
+};
+console.log(nameObj);
