@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var program = require('commander');
+var siapa = require('../lib/siapa');
+
+program
+  .version('0.0.1')
+  .description('Malay name parser CLI')
+  .usage('[options] <name> [path ...]')
+  .option('-o, --out', 'enable some bar')
+  .option('-i, --input', 'enable some baz')
+  .parse(process.argv);
+
+if (!program.args.length) program.help();
+
+var query = program.args.shift()
+  , paths = program.args
+  , pending = paths.length;
+
+//if (!paths.length) paths.push(process.cwd());
+
+
+var name = siapa.parse(query);
+var nameObj = {
+	title: name.title(),
+	first: name.first,
+	middle: name.middle(),
+	last: name.last(),
+	suffix: name.suffix()
+};
+console.log(nameObj);

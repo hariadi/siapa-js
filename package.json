@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/hariadi/siapa.git"
   },
+  "bin": "lib/malay",
   "bugs": {
     "url": "git://github.com/hariadi/siapa/issues"
   },
@@ -32,11 +33,12 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "grunt-mocha-test": "~0.7.0",
-    "should": "~2.1.0"
+    "commander": "~1.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-coffee": "~0.7.0"
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-mocha-test": "~0.8.1",
+    "should": "~2.1.0"
   }
 }
