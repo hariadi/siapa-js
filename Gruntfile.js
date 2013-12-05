@@ -17,29 +17,17 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     coffee: {
       parser: {
-        expand: true,
-        cwd: 'src/lib',
-        src: [
-          '*.coffee'
-        ],
-        dest: 'lib/',
-        ext: '.js'
+        expand: true, cwd: 'src/lib', src: ['*.coffee'], dest: 'lib/', ext: '.js'
       },
       tests: {
-        expand: true,
-        cwd: 'src/test',
-        src: ['**/*.coffee'],
-        dest: 'test/',
-        ext: '.js'
+        expand: true, cwd: 'src/test', src: ['**/*.coffee'], dest: 'test/', ext: '.js'
       }
     },
 
     // Run mocha tests.
     mochaTest: {
       test: {
-        options: {
-          reporter: 'spec'
-        },
+        options: { reporter: 'spec' },
         src: ['test/*_test.js']
       }
     }
