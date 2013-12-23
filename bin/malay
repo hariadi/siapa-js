@@ -3,33 +3,57 @@
 /**
  * Module dependencies.
  */
-
+var fs = require('fs');
+var path = require('path');
 var program = require('commander');
-var siapa = require('../lib/siapa');
 
 program
   .version('0.0.1')
   .description('Malay name parser CLI')
   .usage('[options] <name> [path ...]')
-  .option('-o, --out', 'enable some bar')
-  .option('-i, --input', 'enable some baz')
+  .option('-i, --in', 'Input from JSON, YAML, XML, PLIST or CSV')
+  .option('-o, --out', 'Output from JSON, YAML, XML, PLIST or CSV')
   .parse(process.argv);
 
 if (!program.args.length) program.help();
 
-var query = program.args.shift()
-  , paths = program.args
-  , pending = paths.length;
+var source = program.args[0];
+var dest = program.args[1];
 
-//if (!paths.length) paths.push(process.cwd());
-
-
-var name = siapa.parse(query);
-var nameObj = {
-	title: name.title(),
-	first: name.first,
-	middle: name.middle(),
-	last: name.last(),
-	suffix: name.suffix()
+var ext = function(file) {
+  return path.extname(file).replace('.', '');
 };
-console.log(nameObj);
+
+var nameObj = {};
+
+if (program.in) {
+  if (ext(source) === 'csv') {
+
+    var csv = require('csv');
+
+    csv()
+    .from(source)
+    .transform(function(record, index, callback){
+      console.log(record);
+
+      setTimeout(function(items){
+        var siapa = require('../lib/siapa');
+        var name = siapa.parse('Dato\' Ir. Dr. Hariadi Hinta')
+        nameObj = {
+          title: name.title(),
+          first: name.first,
+          suffixes: name.suffixes,
+          middle: name.middle_names,
+          last: name.last_names
+        }
+        console.log(nameObj)
+        callback();
+      }, 0);
+
+    }, {parallel: 1});
+
+  }
+
+  
+}
+
