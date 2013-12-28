@@ -8,7 +8,7 @@ var path = require('path');
 var program = require('commander');
 
 program
-  .version('0.0.1')
+  .version('0.1.3')
   .description('Malay name parser CLI')
   .usage('[options] <name> [path ...]')
   .option('-i, --in', 'Input from JSON, YAML, XML, PLIST or CSV')
