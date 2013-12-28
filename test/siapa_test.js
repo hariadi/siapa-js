@@ -54,6 +54,11 @@
       });
     });
     describe("given Federal Title", function() {
+      it("should parse correctly with a title 'Jeneral", function() {
+        var name;
+        name = siapa.parse('Jeneral Hariadi Hinta');
+        return should_equal(name, ['Jeneral', 'Hariadi', '', 'Hinta', '']);
+      });
       it("should parse correctly with Tun title", function() {
         var name;
         name = siapa.parse('Tun Hariadi Hinta');

@@ -43,6 +43,10 @@ describe "Malay Name Parser", ->
 
   describe "given Federal Title", ->
 
+    it "should parse correctly with a title 'Jeneral", ->
+      name = siapa.parse 'Jeneral Hariadi Hinta'
+      should_equal name, ['Jeneral', 'Hariadi', '', 'Hinta', '']
+
     it "should parse correctly with Tun title", ->
       name = siapa.parse 'Tun Hariadi Hinta'
       should_equal name, ['Tun', 'Hariadi', '', 'Hinta', '']
