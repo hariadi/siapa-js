@@ -38,8 +38,8 @@
   },
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt-mocha-test": "~0.8.1",
-    "should": "~2.1.0"
+    "grunt-contrib-coffee": "~0.8.2",
+    "grunt-mocha-test": "~0.8.2",
+    "should": "~3.0.1"
   }
 }
