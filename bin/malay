@@ -37,7 +37,7 @@ if (program.in) {
       console.log(record);
 
       setTimeout(function(items){
-        var siapa = require('../lib/siapa');
+        var siapa = require('../src/siapa');
         var name = siapa.parse('Dato\' Ir. Dr. Hariadi Hinta')
         nameObj = {
           title: name.title(),
@@ -54,6 +54,6 @@ if (program.in) {
 
   }
 
-  
+
 }
 

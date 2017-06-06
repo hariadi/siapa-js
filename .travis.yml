@@ -1,5 +1,12 @@
 language: node_js
 node_js:
-  - "0.8"
+  - '8'
+  - '6'
+cache:
+  directories:
+    - $HOME/.npm
+    - node_modules
+before_install:
+  - 'npm install --global npm'
 before_script:
-  - npm install -g grunt-cli
+  - 'npm prune'
