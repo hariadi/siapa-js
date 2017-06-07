@@ -2,6 +2,3 @@
 *.tmp
 *.sublime-project
 *.sublime-workspace
-
-src/docs
-test.js
